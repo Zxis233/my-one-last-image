@@ -98,7 +98,7 @@ h1 {
   background: url(one-last-image-sans.svg) no-repeat;
   background-size: contain;
 }
-@media (min-width: 800px) {
+@media (min-width: 1080px) {
   h1 {
     width: 400px;
     height: 68px;
@@ -110,7 +110,7 @@ h2 {
   margin: 0;
 }
 .app {
-  max-width: 800px;
+  max-width: 1080px;
   margin: 0 auto;
 }
 [v-clock] {
@@ -218,7 +218,7 @@ input[type="range"] {
 }
 .output-box {
   background: #FFF;
-  width: 800px;
+  width: 1080px;
   max-width: 100%;
   margin: 40px auto;
   padding: 20px;
@@ -230,7 +230,7 @@ input[type="range"] {
 }
 .output-box img {
   display: block;
-  width: 800px;
+  width: 1080px;
   max-width: 100%;
   box-shadow: 0 0 20px rgba(40, 80, 200, 0.2);
   margin: 10px 0 40px;
@@ -239,7 +239,7 @@ input[type="range"] {
   padding: 10px 0;
 }
 footer {
-  padding: 40px 0 80px;
+  padding: 0px 0 20px;
   line-height: 3;
 }
 footer a {

@@ -59,8 +59,8 @@ const louvre = async ({img, outputCanvas, config, callback}) => {
 		_height = _height * maxWidth / _width
 		_width = maxWidth
 	}
-	// const _width = 800;
-	// const _height = 800;
+	// const _width = 1080;
+	// const _height = 1080;
 
 
 	let cutLeft = 0;

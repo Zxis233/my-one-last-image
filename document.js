@@ -169,7 +169,7 @@ const convolutes = Object.keys(Convolutes);
 const defaultImageURL = 'images/asuka-8.jpg';
 
 
-const maxPreviewWidth = Math.min(800,document.body.offsetWidth);
+const maxPreviewWidth = Math.min(1080,document.body.offsetWidth);
 let previewWidth = maxPreviewWidth;
 let previewHeight = Math.round(previewWidth * 0.593);
 
@@ -260,7 +260,7 @@ app = new Vue({
 			const { canvas } = app.$refs;
 			// URL.createObjectURL()
 			app.output = canvas.toDataURL('image/jpeg',.9);
-			app.downloadFilename = `[lab.magiconch.com][One-Last-Image]-${+Date.now()}.jpg`;
+			app.downloadFilename = `[louvre.esing.dev][One-Last-Image]-${+Date.now()}.jpg`;
 		},
 		saveDiff(){
 			const { img,canvas } = app.$refs;
@@ -281,7 +281,7 @@ app = new Vue({
 				canvas.width,canvas.height,
 			);
 			app.output = mixCanvas.toDataURL('image/jpeg',.9);
-			app.downloadFilename = `[lab.magiconch.com][One-Last-Image]-diff-${+Date.now()}.jpg`;
+			app.downloadFilename = `[louvre.esing.dev][One-Last-Image]-diff-${+Date.now()}.jpg`;
 
 		},
 		saveDiff2(){
@@ -315,7 +315,7 @@ app = new Vue({
 			mixCanvasCtx.fillStyle = pattern;
     		mixCanvasCtx.fill(); 
 			app.output = mixCanvas.toDataURL('image/jpeg',.9);
-			app.downloadFilename = `[lab.magiconch.com][One-Last-Image]-diff2-${+Date.now()}.jpg`;
+			app.downloadFilename = `[louvre.esing.dev][One-Last-Image]-diff2-${+Date.now()}.jpg`;
 
 		},
 		_saveDiff2(ms = 100){
