@@ -88,6 +88,17 @@
                     <ui-switch v-model="style.hajimei" :disabled="!style.watermark" @input="_louvre(50)">初回</ui-switch>
                     <ui-switch v-model="style.highQuality" @input="_louvre(50)">高清</ui-switch>
                 </div>
+                
+                <!-- 水印位置选择 -->
+                <div style="padding:14px 0;" v-if="style.watermark">
+                    <div style="font-size:12px;opacity:0.6;margin-bottom:8px;">水印位置</div>
+                    <div style="display:inline-block;">
+                        <button class="btn" :class="{current: style.watermarkPosition === 'top-left'}" @click="style.watermarkPosition = 'top-left'; _louvre(50)" style="margin:2px;padding:8px 12px;font-size:13px;">左上</button>
+                        <button class="btn" :class="{current: style.watermarkPosition === 'top-right'}" @click="style.watermarkPosition = 'top-right'; _louvre(50)" style="margin:2px;padding:8px 12px;font-size:13px;">右上</button>
+                        <button class="btn" :class="{current: style.watermarkPosition === 'bottom-left'}" @click="style.watermarkPosition = 'bottom-left'; _louvre(50)" style="margin:2px;padding:8px 12px;font-size:13px;">左下</button>
+                        <button class="btn" :class="{current: style.watermarkPosition === 'bottom-right'}" @click="style.watermarkPosition = 'bottom-right'; _louvre(50)" style="margin:2px;padding:8px 12px;font-size:13px;">右下</button>
+                    </div>
+                </div>
                 <!-- <div class="label-box">
                     <label>
                         <input type="checkbox" v-model="style.shade">调子

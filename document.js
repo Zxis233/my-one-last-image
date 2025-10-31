@@ -147,6 +147,7 @@ const style = {
 	kuma: true,
 	hajimei: false,
 	watermark: true,
+	watermarkPosition: 'bottom-right',  // 水印位置：'bottom-right', 'bottom-left', 'top-right', 'top-left'
 	convoluteName: '一般',
 	convolute1Diff: true,
 	convoluteName2: null,

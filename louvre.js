@@ -448,8 +448,32 @@ const louvre = async ({img, outputCanvas, config, callback}) => {
 			cutTop = watermarkImageHeight;
 		}
 	
-		let setLeft = _width - setWidth - setHeight * 0.2;
-		let setTop = _height - setHeight - setHeight * 0.16;
+		// 根据 watermarkPosition 配置设置水印位置
+		let setLeft, setTop;
+		const margin = setHeight * 0.2; // 统一边距
+		
+		const position = config.watermarkPosition || 'bottom-right';
+		
+		switch(position) {
+			case 'top-left':
+				setLeft = margin;
+				setTop = margin;
+				break;
+			case 'top-right':
+				setLeft = _width - setWidth - margin;
+				setTop = margin;
+				break;
+			case 'bottom-left':
+				setLeft = margin;
+				setTop = _height - setHeight - margin;
+				break;
+			case 'bottom-right':
+			default:
+				setLeft = _width - setWidth - margin;
+				setTop = _height - setHeight - margin;
+				break;
+		}
+		
 		ctx.drawImage(
 			watermarkImageEl,
 			0,cutTop,
